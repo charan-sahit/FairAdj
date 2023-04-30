@@ -101,7 +101,7 @@ if __name__ == "__main__":
     
     acc= []
     # run the code for multiple learning rates
-    for lr in [0.001, 0.005, 0.01, 0.05, 0.1]:
+    for lr in [0.001, 0.005, 0.01]:
         args.lr = lr
 
         fix_seed(args.seed)
@@ -112,7 +112,7 @@ if __name__ == "__main__":
 
     # plot acc vs lr
     import matplotlib.pyplot as plt
-    plt.plot([0.001, 0.005, 0.01, 0.05], acc)
+    plt.plot([0.001, 0.005, 0.01], acc)
     plt.xlabel("learning rate")
     plt.ylabel("AUC")
     plt.show()
