@@ -92,9 +92,9 @@ from torch_geometric.nn import GATConv
 class GCNModelVAE(nn.Module):
     def __init__(self, input_feat_dim, hidden_dim1, hidden_dim2, dropout):
         super(GCNModelVAE, self).__init__()
-        self.gc1 = GATConv(input_feat_dim, hidden_dim1, dropout, heads=8)
-        self.gc2 = GATConv(hidden_dim1*8, hidden_dim2, dropout, heads=1)
-        self.gc3 = GATConv(hidden_dim1*8, hidden_dim2, dropout, heads=1)
+        self.gc1 = GATConv(input_feat_dim, hidden_dim1, heads=8, dropout=dropout)
+        self.gc2 = GATConv(hidden_dim1*8, hidden_dim2, heads=1, dropout=dropout)
+        self.gc3 = GATConv(hidden_dim1*8, hidden_dim2, heads=1, dropout=dropout)
         self.dc = InnerProductDecoder(dropout, act=lambda x: x)
 
     def encode(self, x, edge_index):
@@ -116,7 +116,6 @@ class GCNModelVAE(nn.Module):
 
     def get_parameters(self):
         return [{"params": self.parameters(), "lr_mult": 1.}]
-
 
 
 class InnerProductDecoder(nn.Module):
