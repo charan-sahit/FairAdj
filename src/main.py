@@ -108,10 +108,11 @@ if __name__ == "__main__":
         std = main(args)
 
         acc.append(std[0])
+        print('-----------------------------------')
 
     # plot acc vs lr
     import matplotlib.pyplot as plt
-    plt.plot([0.001, 0.005, 0.01, 0.05, 0.1], acc)
+    plt.plot([0.001, 0.005, 0.01, 0.05], acc)
     plt.xlabel("learning rate")
     plt.ylabel("AUC")
     plt.show()
