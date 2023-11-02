@@ -1,6 +1,6 @@
 # FairAdj
 
-Peizhao Li, Yifei Wang, Han Zhao, Pengyu Hong, and Hongfu
+Based on Peizhao Li, Yifei Wang, Han Zhao, Pengyu Hong, and Hongfu
 Liu. "[On Dyadic Fairness: Exploring and Mitigating Bias in Graph Connections](https://openreview.net/pdf?id=xgGS6PmzNq6)
 , ICLR 2021.
 
@@ -17,18 +17,6 @@ terms of various statistics, and at the same time enjoys a favorable fairness-ut
 
 ![Figure](./img/cora_adv.png)
 
-## Reference
-
-    @inproceedings{
-    li2021on,
-    title={On Dyadic Fairness: Exploring and Mitigating Bias in Graph Connections},
-    author={Peizhao Li and Yifei Wang and Han Zhao and Pengyu Hong and Hongfu Liu},
-    booktitle={International Conference on Learning Representations},
-    year={2021},
-    url={https://openreview.net/forum?id=xgGS6PmzNq6}
-    }
-
----
 
 ## Setup
 
@@ -58,7 +46,3 @@ Experiments on Adversarial Graph Embedding:
 
 Similarly, `alpha` can be set to various values, see Figure 1 and 6 in our paper for more results.
 
-
-## Results
-
-We provide all the experimental results and figures in `./res`.
